@@ -1,33 +1,45 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-int main (){
-
+int main()
+{
     int n;
-    vector<int> arr(n); 
+    char ch;
 
-
-
-    cout << "Enter the size of array" << endl;
-    cin >> n;
-
-    //vector is used to take arr that can grow (Dynamic) unless like normall array
-    cout << "enter the elemnts " << endl;
-    for (int i = 0; i < n; i++)
+    do
     {
-        cin >> arr[i];
-    }
+        cout << "Enter the size of array: ";
+        cin >> n;
 
-    int max = arr[0];
-    
-    for (int i = 1; i < n; i++)
-    {
-        if(arr[i]> max)
-            max = arr[i];
+        if (n <= 0) {
+            cout << "Array size must be positive." << endl;
+            continue;
+        }
 
-    }
+        vector<int> arr(n);
 
-    cout << "Max element is = " << max << endl;
+        cout << "Enter the elements of the array: ";
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+
+        int max = arr[0];
+        for (int i = 1; i < n; i++)
+        {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+
+        cout << "Max element in the array is: " << max << endl;
+
+        cout << "Do you want to enter a new array? (y/n): ";
+        cin >> ch;
+
+    } while (ch == 'y' || ch == 'Y');
+
+    cout << "Program ended." << endl;
     return 0;
 }
