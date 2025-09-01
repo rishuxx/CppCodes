@@ -27,7 +27,7 @@ int main (){
     for (int i = 0; i < y; i++)
     {
         cout << even << " ";
-        even = even + 2;
+        even = even + 3;
     }
     
 }
