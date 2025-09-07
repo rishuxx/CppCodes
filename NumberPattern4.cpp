@@ -3,17 +3,18 @@ using namespace std;
 
 int main() {
     int n;
-    cout << "Enter the number" << endl;
+    cout << "Enter the number"<<endl;
     cin >> n;
 
     int row = 1;
-
-    while (row<=n )
+    while (row<=n)
     {
         int col = 1;
         while (col<=row)
         {
-            cout << row;
+
+            int rev = row - col + 1;
+            cout << rev << " ";
             col++;
         }
         cout << endl;

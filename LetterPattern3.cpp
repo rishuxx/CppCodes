@@ -2,24 +2,29 @@
 using namespace std;
 
 int main() {
-    int n;
-    cout << "Enter the number" << endl;
+      int n;
+    cout << "Enter the number"<<endl;
     cin >> n;
-
     int row = 1;
+    char ch = 'A';
 
-    while (row<=n )
+    while (row<=n)
     {
         int col = 1;
-        while (col<=row)
+        
+        while (col<=n)
         {
-            cout << row;
+            cout << ch << " ";
+            ch++;
             col++;
         }
         cout << endl;
-        row++;
+        row++;   
     }
     
+
+
+
 
     return 0;
 }

@@ -2,18 +2,19 @@
 using namespace std;
 
 int main() {
-    int n;
-    cout << "Enter the number" << endl;
-    cin >> n;
 
+    int n;
+    cin >> n;
     int row = 1;
 
-    while (row<=n )
+    while (row<=n)
     {
         int col = 1;
+        int count = row;
         while (col<=row)
         {
-            cout << row;
+            cout << count << " ";
+            count++;
             col++;
         }
         cout << endl;
