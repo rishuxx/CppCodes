@@ -6,14 +6,13 @@ int main(){
     int n;
     cout << "Enter the number : " << endl;
     cin >> n;
-
     int row = 1;
     while (row<=n)
     {
         int col = 1;
-        while (col<=row)
+        while (col<=n)
         {
-            char ch = 'A' + col - 1;
+            char ch = 'A' + col + row - 2;
             cout << ch << " ";
             col++;
         }
